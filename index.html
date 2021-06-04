@@ -1,12 +1,15 @@
 <style>
 
   .Google-Image {
-    padding: 300px 500px 300px 500px;
+    margin: 300px 800px 50px 800px;
+  }
+  .search-bar {
+    margin: 50px 100px 0px 840px;
+  }
+  .search-buttons {
+    margin: 0px 100px 0px 825px;
   }
 </style>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,15 +19,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
+<ul>
+  <a href="default.asp">About</a>
+  <a href="news.asp">Store</a>
+  <a href="contact.asp">Gmail</a>
+  <a href="about.asp">Images</a>
+  <a href="about.asp">Icon</a>
+  <a href="about.asp">Sign in</a>
+</ul>
+
 <body>
-  <img src="google.png" alt="Google" class="Google-Image">
-  <label for="search-bar"></label>
-  <input type="text" id="search-bar">
-  <button class="Google-Search" type="button">
-    Google Search
-  </button>
-  <button class="I'm-Feeling-Lucky" type="button">
-    I'm Feeling Lucky
-  </button>
+  <div class="Google-Image">
+    <img src="google.png" alt="Google">
+  </div>
+  <div class="search-bar">
+    <label for="search">
+      <input type="text" id="search">
+    </label>
+  </div>
+    <br>
+    <br>
+  <div class="search-buttons">
+    <button class="Google-Search" type="button">
+      Google Search
+    </button>
+    <button class="I'm-Feeling-Lucky" type="button">
+      I'm Feeling Lucky
+    </button>
+  </div>
 </body>
 </html>
