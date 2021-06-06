@@ -1,18 +1,51 @@
 <style>
-  .Google-Image {
-    margin: 200px 800px 50px 800px;
+  .grid-container {
+  display: grid;
+  grid-template-columns: 0.6fr 1.8fr 0.6fr;
+  grid-template-rows: 0.8fr 1.4fr 0.8fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "left-navbar empty-top right-navbar"
+    "empty-left search empty-right"
+    "left-footer empty-bottom right-footer";
+  height: 100%;
+  width: 100%;
+}
+
+.search { 
+  grid-area: search; 
+  justify-self: center;
   }
-  .search-bar {
-    margin: 50px 100px 0px 840px;
+
+.left-navbar { 
+  grid-area: left-navbar; 
+  justify-self: start;
   }
-  .search-buttons {
-    margin: 0px 100px 0px 825px;
+
+.right-navbar { 
+  grid-area: right-navbar; 
+  justify-self: end;
   }
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+
+.empty-top { grid-area: empty-top; }
+
+.empty-bottom { grid-area: empty-bottom; }
+
+.left-footer { 
+  grid-area: left-footer; 
+  align-self: end;
   }
+
+.right-footer { 
+  grid-area: right-footer; 
+  align-self: end;
+  justify-self: end;
+  }
+
+.empty-right { grid-area: empty-right; }
+
+.empty-left { grid-area: empty-left; }
+
 </style>
 
 <!DOCTYPE html>
@@ -25,34 +58,73 @@
 </head>
 
 
-<ul>
-  <a href="default.asp">About</a>
-  <a href="news.asp">Store</a>
-  <a href="contact.asp">Gmail</a>
-  <a href="about.asp">Images</a>
-  <a href="about.asp">Icon</a>
-  <a href="about.asp">Sign in</a>
-</ul>
-
-
 <body>
-  <div class="Google-Image">
-    <img src="google.png" alt="Google">
+
+  <div class="grid-container">
+    <div class="search">
+      <img src="google.png" alt="Google">
+      <br>
+      <br>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      <label for="search">
+        <input type="text" id="search">
+      </label>
+      <br>
+      <br>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      <button class="Google-Search" type="button">
+        Google Search
+      </button>
+      <button class="I'm-Feeling-Lucky" type="button">
+        I'm Feeling Lucky
+      </button>
+    </div>
+    <div class="left-navbar">
+      <ul>
+        <a href="default.asp">About</a>
+        <a href="news.asp">Store</a>
+      </ul>
+    </div>
+    <div class="right-navbar">
+      <ul>
+        <a href="contact.asp">Gmail</a>
+        <a href="about.asp">Images</a>
+        <span class="material-icons-outlined">
+          apps
+        </span>
+        <a href="about.asp">Sign in</a>
+      </ul>
+    </div>
+    <div class="empty-top"></div>
+    <div class="empty-bottom"></div>
+    <div class="left-footer">
+      <footer>
+        <a href="defaul.asp">Advertising</a>
+        &nbsp;
+        <a href="defaul.asp">Business</a>
+        &nbsp;
+        <a href="defaul.asp">How Search Works</a>
+      </footer>
+    </div>
+    <div class="right-footer">
+      <footer>
+        <a href="defaul.asp">Privacy</a>
+        &nbsp;
+        <a href="defaul.asp">Terms</a>
+        &nbsp;
+        <a href="defaul.asp">Settings</a>
+      </footer>
+    </div>
+    <div class="empty-right"></div>
+    <div class="empty-left"></div>
   </div>
-  <div class="search-bar">
-    <label for="search">
-      <input type="text" id="search">
-    </label>
-  </div>
-    <br>
-    <br>
-  <div class="search-buttons">
-    <button class="Google-Search" type="button">
-      Google Search
-    </button>
-    <button class="I'm-Feeling-Lucky" type="button">
-      I'm Feeling Lucky
-    </button>
-  </div>
+
+
 </body>
 </html>
